@@ -1,0 +1,43 @@
+section{
+    float: left;
+    width: 40%;
+    height: 50vw;
+    padding-left: 30px;
+}
+aside{
+    float: left;
+    width: 60%;
+    height: 50vw;
+    padding: 30px 30px 50px 30px;
+    font-size: 20px;
+    
+}
+table {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: small;
+    border-spacing: 1vw;
+}
+th{
+
+    text-align: center;
+    font-size: small;
+    border: 1px solid #000;
+    border-collapse: collapse;
+    padding: 3px;
+    
+    
+}
+section img {
+    width:23vw;
+    height:24vw;
+    padding: 30px 30px 5px 20px;
+}
+.card {
+    padding-left: 10px;
+    font-size: medium;
+}
+.card-title  {
+   width: 20rem;
+    text-align: center;
+    font-size: medium;
+} 
