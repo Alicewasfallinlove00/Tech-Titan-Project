@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complete Webpage Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-image: url('https://example.com/background-image.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 60px 0;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 3em;
+        }
+        .container {
+            display: flex;
+            padding: 20px;
+        }
+        main {
+            flex: 2;
+            padding: 20px;
+        }
+        aside {
+            flex: 1;
+            background-color: #f4f4f4;
+            padding: 20px;
+            margin-left: 20px;
+            box-shadow: -2px 0 5px rgba(0,0,0,0.1);
+        }
+        section {
+            margin-bottom: 20px;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+        .site-map {
+            text-align: left;
+            display: flex;
+            justify-content: center;
+        }
+        .site-map ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0 20px;
+        }
+        .site-map ul li {
+            margin-bottom: 10px;
+        }
+        .site-map ul li a {
+            color: white;
+            text-decoration: none;
+        }
+        .site-map ul li a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Welcome to My Website</h1>
+    </header>
+
+    <div class="container">
+        <main>
+            <h2>Main Content</h2>
+            <section>
+                <h3>Section 1</h3>
+                <p>This is the first section of the main content. You can put any content you like here, including text, images, or even videos.</p>
+            </section>
+            <section>
+                <h3>Section 2</h3>
+                <p>This is the second section. Again, you can fill this area with content relevant to your website.</p>
+            </section>
+        </main>
+
+        <aside>
+            <h2>Related Information</h2>
+            <p>This is some additional information related to the main content. It could be a sidebar with links, adverts, or other supplementary content.</p>
+            <ul>
+                <li><a href="#">Related Link 1</a></li>
+                <li><a href="#">Related Link 2</a></li>
+                <li><a href="#">Related Link 3</a></li>
+                <li><a href="#">Related Link 4</a></li>
+            </ul>
+        </aside>
+    </div>
+
+    <footer>
+        <div class="site-map">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+            <ul>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms of Service</a></li>
+                <li><a href="#">Support</a></li>
+                <li><a href="#">FAQs</a></li>
+            </ul>
+        </div>
+        <p>&copy; 2024 My Website. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

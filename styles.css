@@ -1,0 +1,328 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #34495e;
+    display: flex;
+    height: 100vh;
+    overflow: hidden; /* Prevents body from scrolling */
+}
+
+.container {
+    display: flex;
+    width: 100%;
+}
+
+/* Sidebar */
+.sidebar {
+    background-color: #2c3e50;
+    width: 400px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    color: #ecf0f1;
+    overflow-y: auto; /* Enables scrolling for overflow content */
+}
+
+/* Unified button, anchor, and extras button styles */
+.sidebar button, 
+.sidebar a, 
+.extras ul li button {
+    border: none;
+    background-color: #34495e;  /* Default background color */
+    color: white;
+    padding: 10px 20px;
+    width: 100%;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: left;
+    transition: background-color 0.3s, transform 0.2s ease-in-out; /* Smooth transitions */
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Align text and icons consistently */
+}
+
+.sidebar button i, 
+.extras ul li button i {
+    margin-right: 10px; /* Space between icon and text */
+}
+
+/* Hover effect for all buttons and links */
+.sidebar button:hover, 
+.sidebar a:hover, 
+.extras ul li button:hover {
+    background-color: #1abc9c; /* Change background on hover */
+    transform: scale(1.05); /* Slight enlarge effect on hover */
+}
+
+/* Active state for buttons and links */
+.sidebar button.active, 
+.sidebar a.active {
+    background-color: #1abc9c;  /* Same as hover color for active state */
+    color: white;
+}
+
+/* Profile section */
+.profile {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.profile-pic {
+    border-radius: 50%;
+    width: 50px;
+    margin-right: 10px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 15px 0;
+}
+
+/* Extras section */
+.extras {
+    margin-top: auto;
+    padding-top: 20px;
+    border-top: 1px solid #7f8c8d;
+}
+
+.extras ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.extras ul li {
+    margin: 10px 0;
+}
+
+/* Main Content */
+.main-content {
+    flex-grow: 1;
+    padding: 20px;
+    color: #ecf0f1;
+    overflow-y: auto; /* Enables scrolling for content */
+    overflow-x: auto;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+/* Book Grid */
+.book-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    max-height: calc(100vh - 150px); /* Adjust to fit within the viewport */
+    overflow-y: auto; /* Allows scrolling when content exceeds height */
+}
+
+/* Book Item */
+.book-item {
+    background-color: #ecf0f1;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+    position: relative;
+    transition: transform 0.3s;
+}
+
+.book-item:hover {
+    transform: scale(1.05); /* Slight enlarge effect on hover */
+}
+
+.movie-poster {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.rating {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: orange;
+    color: white;
+    font-weight: bold;
+    padding: 5px;
+    border-radius: 50%;
+}
+
+/* Star Rating Style */
+.stars {
+    margin-top: 10px;
+    color: #f1c40f; /* Gold for stars */
+}
+
+.stars i {
+    font-size: 18px;
+    margin-right: 5px; /* Space between stars */
+}
+
+.stars i.fa-star-half-alt, .stars i.fa-star-o {
+    color: #bdc3c7; /* Grey for half/empty stars */
+}
+
+.book-item p {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #2c3e50;
+}
+
+.book-item span {
+    color: #7f8c8d;
+    font-size: 12px;
+}
+
+/* Search Bar */
+.search-container {
+    position: relative;
+    display: inline-block;
+    width: 100%; /* Full width */
+    max-width: 200px; /* Set a max width */
+    margin-top: 20px;
+    padding-right: 20px; /* Space above */
+   
+}
+
+.search-container input {
+    width: 100%;
+    padding: 12px 40px; /* Add padding for more space */
+    font-size: 16px;
+    border: 2px solid #bdc3c7; /* Solid border */
+    border-radius: 30px; /* Rounded corners */
+    outline: none; /* Remove outline */
+    transition: border-color 0.3s; /* Transition effect */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.search-container input:focus {
+    border-color: #1abc9c; /* Change border color on focus */
+}
+
+.search-container .search-icon {
+    position: absolute;
+    left: 15px; /* Adjust positioning */
+    top: 50%;
+    transform: translateY(-50%);
+    color: #999;
+    font-size: 20px; /* Larger icon */
+}
+
+/* Responsive Styles for Tablet and Desktop */
+@media only screen and (max-width: 1024px) {
+    /* Tablet styles */
+    .sidebar {
+        width: 300px; /* Adjust sidebar width for tablets */
+    }
+
+    .book-grid {
+        grid-template-columns: repeat(3, 1fr); /* 3 columns for tablets */
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    /* Mobile Styles */
+    .container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        display: none; /* Hidden sidebar for mobile */
+        position: absolute;
+        z-index: 1000;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: #2c3e50;
+    }
+
+    .sidebar.active {
+        display: flex; /* Display sidebar when active */
+    }
+
+    .hamburger {
+        display: block;
+        font-size: 24px;
+        color: white;
+        padding: 10px;
+        cursor: pointer;
+    }
+
+    /* Main Content */
+.main-content {
+    flex-grow: 1;
+    padding: 20px;
+    color: #ecf0f1;
+    overflow-y: auto; /* Enables scrolling for the main content */
+    height: 100vh; /* Ensure the main content takes up the full viewport height */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Book Grid */
+.book-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Flexible layout */
+    gap: 20px;
+    padding: 20px;
+    overflow-y: auto; /* Enables scrolling if content overflows */
+}
+
+/* Adjust for Tablet */
+@media only screen and (min-width: 600px) and (max-width: 992px) {
+    .book-grid {
+        grid-template-columns: repeat(3, 1fr); /* 3 columns on tablet */
+    }
+}
+
+/* Adjust for Desktop */
+@media only screen and (min-width: 993px) {
+    .book-grid {
+        grid-template-columns: repeat(4, 1fr); /* 4 columns on larger screens */
+    }
+}
+
+
+}
+/* Custom Scrollbar Styles */
+::-webkit-scrollbar {
+    width: 12px; /* Sets the width of the scrollbar */
+}
+
+::-webkit-scrollbar-track {
+    background-color: #2c3e50; /* Scrollbar track background */
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #1abc9c; /* Scrollbar thumb (the moving part) */
+    border-radius: 10px; /* Rounded edges */
+    border: 3px solid #2c3e50; /* Creates padding around the thumb */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #16a085; /* Darken color on hover */
+}
+
+/* Firefox Custom Scrollbar */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #1abc9c #2c3e50;
+}
+.images{
+    background-color: whitesmoke;
+}
+::-webkit-scrollbar{
+    width: 100%;
+    padding-right: 2px;
+    margin-top: 5px;
+}

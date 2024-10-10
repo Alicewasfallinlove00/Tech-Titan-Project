@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trending Movies</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #afcbf1;
+    color: #ffffff;
+}
+
+.container {
+    display: flex;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 20%;
+    background-color: #086063;
+    padding: 20px;
+}
+
+.user-profile {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.user-profile .avatar {
+    width: 50px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.menu {
+    list-style: none;
+    padding: 0;
+}
+
+.menu li {
+    padding: 10px 0;
+    font-size: 18px;
+    color: #b8c1ec;
+    cursor: pointer;
+}
+
+.menu li.active {
+    color: #fff;
+}
+
+.extra-options p {
+    margin-top: 30px;
+    font-size: 16px;
+    color: #b8c1ec;
+    cursor: pointer;
+}
+
+/* Main Content */
+.main-content {
+    flex-grow: 1;
+    padding: 20px;
+}
+
+h2 {
+    color: #ffffff;
+    font-size: 24px;
+}
+
+.movie-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.movie-card {
+    background-color: #374a67;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.2s;
+}
+
+.movie-card:hover {
+    transform: scale(1.05);
+}
+
+.movie-card img {
+    width: 100%;
+    display: block;
+}
+
+.movie-info {
+    padding: 15px;
+}
+
+.movie-info h3 {
+    margin: 0 0 10px;
+    font-size: 18px;
+    color: #ffffff;
+}
+
+.movie-info p {
+    margin: 0;
+    font-size: 14px;
+    color: #b8c1ec;
+}
+
+.movie-info .rating {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #f39c12;
+    padding: 5px 10px;
+    border-radius: 50px;
+    font-size: 14px;
+    color: #fff;
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="user-profile">
+                <img src="/images/photo_2024-09-23_15-02-55.jpg" alt="User Avatar" class="avatar">
+                <p>Hi, Otis</p>
+            </div>
+            <ul class="menu">
+                <li>My Collection</li>
+                <li class="active">Trending Movies</li>
+                <li>History</li>
+                <li>Subscriptions</li>
+                <li>Watch Later</li>
+            </ul>
+            <div class="extra-options">
+                <p>Recommendations</p>
+                <p>Top Genres</p>
+                <p>Artist of the Month</p>
+                <p>Quote of the Week</p>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <h2>Trending Movies</h2>
+            <div class="movie-grid">
+                <!-- Movie Card -->
+                <div class="movie-card">
+                    <img src="in_the_heart_of_the_sea.jpg" alt="In the Heart of the Sea">
+                    <div class="movie-info">
+                        <h3>In the Heart of the Sea</h3>
+                        <p>Drama, Action</p>
+                        <span class="rating">7.6</span>
+                    </div>
+                </div>
+
+                <!-- Additional movie cards can follow here -->
+                <!-- For example: -->
+                <div class="movie-card">
+                    <img src="bridge_of_spies.jpg" alt="Bridge of Spies">
+                    <div class="movie-info">
+                        <h3>Bridge of Spies</h3>
+                        <p>Drama, True Story</p>
+                        <span class="rating">8.0</span>
+                    </div>
+                </div>
+                <!-- Add more movie cards in the same format -->
+            </div>
+        </main>
+    </div>
+</body>
+</html>
